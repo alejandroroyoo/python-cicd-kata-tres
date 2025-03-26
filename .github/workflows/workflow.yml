@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: docker build . -t alexpaulsito/python-cicd-kata:latest
+      - run: docker build . -t alexpaulsito/python-cicd-kata-tres:latest
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -29,4 +29,4 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      - run: docker push alexpaulsito/python-cicd-kata:latest
+      - run: docker push alexpaulsito/python-cicd-kata-tres:latest
