@@ -14,8 +14,8 @@ jobs:
           python-version-file: "pyproject.toml"
       - run: uv run ruff format .
     build:
-    needs: code-quality
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - run: docker build . -t alexpaulsito/python-cicd-kata:latest
+        needs: code-quality
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - run: docker build . -t alexpaulsito/python-cicd-kata:latest
